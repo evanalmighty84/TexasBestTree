@@ -1,3 +1,5 @@
+# .github/workflows/deploy.yml
+
 name: Deploy React to GitHub Pages
 
 on:
@@ -16,7 +18,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
@@ -28,7 +30,8 @@ jobs:
         run: npm install --prefix react-app --legacy-peer-deps
 
       - name: Run predeploy (build & copy)
-        run: npm run predeploy
+        run: |
+          CI=false npm run predeploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
