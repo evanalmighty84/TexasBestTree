@@ -22,25 +22,13 @@ const HeroSection = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
-
-        // Build FormData from the <form> element
         const formData = new FormData(form);
-
-        // (Optional) you could explicitly append the file,
-        // but since your <input name="treeImage"> is inside the form,
-        // FormData(form) picks it up automatically:
-        //
-        // const fileInput = form.elements['treeImage'];
-        // if (fileInput.files.length) {
-        //   formData.append('treeImage', fileInput.files[0]);
-        // }
 
         try {
             const response = await fetch(
-                'https://eclipse-pool-api-3bb6c1946b76.herokuapp.com/api/contactus',
+                'https://texas-best-tree-api.herokuapp.com/api/contactus',
                 {
                     method: 'POST',
-                    // DO NOT set Content-Type header; browser will set multipart/form-data boundary
                     body: formData,
                 }
             );
@@ -48,10 +36,10 @@ const HeroSection = () => {
             if (response.ok) {
                 alert('Message sent successfully!');
                 form.reset();
-                setShowModal(false);
+                setShowModal(false);    // ← hides the modal+form
             } else {
-                const errorData = await response.json();
-                alert('Error: ' + (errorData.error || 'Unknown error occurred'));
+                const err = await response.json();
+                alert('Error: ' + (err.error || 'Unknown error occurred'));
             }
         } catch (error) {
             console.error(error);
@@ -62,7 +50,6 @@ const HeroSection = () => {
 
     return (
         <>
-            {/* Modal Overlay */}
             {/* Modal Overlay */}
             {showModal && (
                 <div
@@ -109,18 +96,61 @@ const HeroSection = () => {
                         {/* Contact Form */}
                         <form onSubmit={handleSubmit} encType="multipart/form-data">
                             <div className="row gx-2">
-                                {/* … your existing fields … */}
-
-                                {/* ↓ New file‑upload field */}
+                                <div className="col-12 col-md-6 mb-2">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        name="name"
+                                        placeholder="Full Name"
+                                        required
+                                    />
+                                </div>
+                                <div className="col-12 col-md-6 mb-2">
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        name="email"
+                                        placeholder="Your Email"
+                                        required
+                                    />
+                                </div>
+                                <div className="col-12 col-md-6 mb-2">
+                                    <input
+                                        type="tel"
+                                        className="form-control"
+                                        name="phone"
+                                        placeholder="Your Phone"
+                                        required
+                                    />
+                                </div>
+                                <div className="col-12 col-md-6 mb-2">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        name="address"
+                                        placeholder="Your Address"
+                                    />
+                                </div>
                                 <div className="col-12 mb-3">
-                                    <label htmlFor="cf-image" className="form-label">
+                  <textarea
+                      className="form-control"
+                      name="message"
+                      rows="4"
+                      placeholder="Your Message"
+                      required
+                  />
+                                </div>
+
+                                {/* Optional file upload */}
+                                <div className="col-12 mb-3">
+                                    <label htmlFor="treeImage" className="form-label">
                                         Upload picture of tree (optional)
                                     </label>
                                     <input
                                         type="file"
                                         accept="image/*"
                                         className="form-control"
-                                        id="cf-image"
+                                        id="treeImage"
                                         name="treeImage"
                                     />
                                 </div>
@@ -132,10 +162,10 @@ const HeroSection = () => {
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             )}
+
             {/* Hero Section */}
             <section
                 id="home"
