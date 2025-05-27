@@ -22,7 +22,10 @@ jobs:
           node-version: '18.x'
 
       - name: Install root dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
+
+      - name: Install React app dependencies
+        run: npm install --prefix react-app --legacy-peer-deps
 
       - name: Run predeploy (build & copy)
         run: npm run predeploy
