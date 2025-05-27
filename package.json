@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "evanalmighty84.github.io",
+  "homepage": "https://evanalmighty84.github.io/TexasBestTree",
   "workspaces": ["functions"],
   "scripts": {
     "predeploy": "npm run build --prefix react-app && rm -rf app && mkdir app && cp -r react-app/build/* app/",
