@@ -4,7 +4,7 @@ const streamifier = require('streamifier');
 const cloudinary  = require('cloudinary').v2;
 const sendEmail   = require('../utils/sendEmail');
 const twilio      = require('twilio');
-const pool        = require('../../../db/db');
+const pool        = require('../db/db');
 require('dotenv').config();
 
 // ← Your Twilio client + business info:
