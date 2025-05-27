@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1045f8e5.css",
+    "main.js": "/static/js/main.980846a3.js",
+    "static/media/TreeMovie3.gif": "/static/media/TreeMovie3.3c62e85a8d2280357c97.gif",
+    "static/media/Picture10.jpg": "/static/media/Picture10.81dbbd2b528b95b0171c.jpg",
+    "static/media/TreeStump.jpg": "/static/media/TreeStump.153be67f8f3370dc7964.jpg",
+    "static/media/treecut1.jpg": "/static/media/treecut1.1c10c0d8cefea80cc5e8.jpg",
+    "static/media/TreeRemoval.jpg": "/static/media/TreeRemoval.868b955549f505becba6.jpg",
+    "static/media/treecut2.jpg": "/static/media/treecut2.e859dbca74ee697ff56b.jpg",
+    "static/media/TreeStorm.jpg": "/static/media/TreeStorm.72a7db3e90707b212e61.jpg",
+    "static/media/9thpicture.webp": "/static/media/9thpicture.26fc376e6abdf23c4837.webp",
+    "static/media/logopoolservice.png": "/static/media/logopoolservice.89d610e2c7d3ee0fd46b.png",
+    "static/media/TreeAboutUs.jpg": "/static/media/TreeAboutUs.d90c5a6a79d55a180639.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/TreeCo4.jpg": "/static/media/TreeCo4.211eb696ae99aa6d18b3.jpg",
+    "static/media/brancheswallpaper.jpg": "/static/media/brancheswallpaper.a9860b7d683b5aa4a1dc.jpg",
+    "static/media/TreeCo2.png": "/static/media/TreeCo2.53554a7e446bd23f64c5.png",
+    "static/media/7thpicture.jpeg": "/static/media/7thpicture.c1fb0721ce0612666dae.jpeg",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/8thpicture.jpg": "/static/media/8thpicture.f7a5fc6515b5b2c9ea61.jpg",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/img.png": "/static/media/img.7fbb948976a0776011d1.png",
+    "index.html": "/index.html",
+    "main.1045f8e5.css.map": "/static/css/main.1045f8e5.css.map",
+    "main.980846a3.js.map": "/static/js/main.980846a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1045f8e5.css",
+    "static/js/main.980846a3.js"
+  ]
+}
