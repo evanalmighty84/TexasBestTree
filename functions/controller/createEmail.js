@@ -95,7 +95,7 @@ exports.createEmail = [
                 to: sanitizedPhone
             });
 
-            // Text business
+// Text business
             await client.messages.create({
                 body: `📬 New contact from ${name}\n📞 ${sanitizedPhone}\n📧 ${email}\n🏠 ${address}\n📩 ${message}`,
                 messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
