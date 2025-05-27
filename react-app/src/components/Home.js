@@ -1,3 +1,4 @@
+// src/components/HomePage.js
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -15,26 +16,69 @@ import '../styles/templatemo-style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = () => {
+    const cities = [
+        'Lewisville',
+        'Coppell',
+        'The Colony',
+        'Dallas',
+        'Plano',
+        'Frisco',
+        'Flower Mound'
+    ];
+
+    const cityList = cities.join(', ');
+
     return (
         <div>
             <Helmet>
-                <title>Pool Cleaning Services | Murphy, Plano, Sachse, Allen, Rowlett</title>
-                <meta name="description" content="Eclipse Pool Service provides professional pool cleaning, maintenance, and repair in Murphy, Plano, Sachse, Allen, and Rowlett." />
-                <meta name="keywords" content="Murphy pool cleaning, Plano pool cleaning, Sachse pool cleaning, Allen pool cleaning, Rowlett pool cleaning" />
-                <meta property="og:title" content="Eclipse Pool Service" />
-                <meta property="og:description" content="Top-rated pool services in Murphy, Plano, Sachse, Allen, and Rowlett." />
+                <title>
+                    Tree Removal, Pruning &amp; Trimming, Stump Grinding &amp; Emergency Storm Response
+                    in {cityList}
+                </title>
+                <meta
+                    name="description"
+                    content={`Texas Best Tree Company provides tree removal, pruning & trimming, stump grinding, and emergency storm response services in ${cityList}.`}
+                />
+                <meta
+                    name="keywords"
+                    content={cities
+                        .flatMap(city => [
+                            `${city} tree removal`,
+                            `${city} tree pruning`,
+                            `${city} stump grinding`,
+                            `${city} storm response`
+                        ])
+                        .join(', ')}
+                />
+                <meta property="og:title" content="Texas Best Tree Company" />
+                <meta
+                    property="og:description"
+                    content={`Expert tree removal, pruning, stump grinding & emergency storm response in ${cityList}.`}
+                />
             </Helmet>
 
             {/* SEO Hidden Headings */}
-            <h1 className="visually-hidden">Pool Cleaning and Repair Services in Murphy, Plano, Sachse, Allen, and Rowlett</h1>
-            <h2 className="visually-hidden">Expert Pool Cleaning Services</h2>
-            <h2 className="visually-hidden">Reliable Pool Repair Company</h2>
-            <h2 className="visually-hidden">Top Rated Pool Maintenance in Murphy, Plano, Sachse, Allen, Rowlett</h2>
+            <h1 className="visually-hidden">
+                Tree Removal, Pruning &amp; Trimming, Stump Grinding &amp; Emergency Storm Response
+                in {cityList}
+            </h1>
+            <h2 className="visually-hidden">
+                Tree Removal in {cityList}
+            </h2>
+            <h2 className="visually-hidden">
+                Tree Pruning &amp; Trimming in {cityList}
+            </h2>
+            <h2 className="visually-hidden">
+                Stump Grinding in {cityList}
+            </h2>
+            <h2 className="visually-hidden">
+                Emergency Storm Response in {cityList}
+            </h2>
+
             <Navbar />
 
             <HeroSection />
             <AboutSection />
-
             <ServicesSection />
             <Gallery />
             <Testimonials />
