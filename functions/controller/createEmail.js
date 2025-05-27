@@ -88,19 +88,27 @@ exports.createEmail = [
             const subject = `📬 New Contact Submission from ${name}`;
             await sendEmail(businessEmail, subject, htmlContent);
 
-            // Text customer
-            await client.messages.create({
+            // --- Send SMS/MMS to customer ---
+            const customerParams = {
                 body: `Hi ${name}, thanks for contacting Tx Best Tree Company! We’ll reach out shortly.`,
                 messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
                 to: sanitizedPhone
-            });
+            };
+            if (imageUrl) {
+                customerParams.mediaUrl = [imageUrl];
+            }
+            await client.messages.create(customerParams);
 
-// Text business
-            await client.messages.create({
+            // --- Send SMS/MMS to business ---
+            const businessParams = {
                 body: `📬 New contact from ${name}\n📞 ${sanitizedPhone}\n📧 ${email}\n🏠 ${address}\n📩 ${message}`,
                 messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
                 to: businessPhone
-            });
+            };
+            if (imageUrl) {
+                businessParams.mediaUrl = [imageUrl];
+            }
+            await client.messages.create(businessParams);
 
             // Upsert subscriber
             const existing = await pool.query(
