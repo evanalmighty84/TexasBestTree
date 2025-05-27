@@ -5,19 +5,25 @@ const testimonials = [
     {
         name: "Melissa R.",
         image: "https://randomuser.me/api/portraits/women/44.jpg",
-        review: "Eclipse Pool Service has kept our pool sparkling clean all year! Their team is reliable and always on time. Highly recommended for regular maintenance!",
+        review:
+            "Texas Best Tree Company did an amazing job removing a large, dying oak from our backyard. They were professional, courteous, and cleaned up every last bit of debris. Highly recommended!",
     },
     {
         name: "Jason K.",
         image: "https://randomuser.me/api/portraits/men/46.jpg",
-        review: "I've used several pool companies before, but Eclipse Pool Service is the best! They caught a small leak early and saved me from a huge repair later. Excellent service!",
+        review:
+            "I called them for emergency storm response after last week’s windstorm. They arrived within hours, cleared fallen limbs safely, and saved us from potential damage. Fantastic service!",
     },
     {
         name: "Alyssa P.",
         image: "https://randomuser.me/api/portraits/women/65.jpg",
-        review: "The weekly pool maintenance plan is worth every penny! Our water has never looked better. Friendly staff, and they always leave everything spotless.",
+        review:
+            "Their pruning and stump‑grinding package transformed our overgrown yard into a clean, healthy landscape. The arborists really know what they’re doing—our trees look better than ever!",
     },
 ];
+
+
+
 
 
 
@@ -68,7 +74,7 @@ const Testimonials = () => {
             </div>
 
             <p style={{ textAlign: 'center', marginTop: '20px', color: '#555', fontSize: '14px' }}>
-                <a href="https://g.co/kgs/9aikPZK" style={{ color: '#007bff', textDecoration: 'none' }}>
+                <a href="https://g.co/kgs/wK2ycxw" style={{ color: '#007bff', textDecoration: 'none' }}>
                     Read More Reviews on Google
                 </a>
             </p>

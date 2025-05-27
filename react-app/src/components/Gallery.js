@@ -1,29 +1,29 @@
 import React from 'react';
-import Image1 from "../images/Picture10.jpg"
-import Image2 from "../images/7thpicture.jpeg"
-import Image3 from "../images/8thpicture.jpg"
-import Image4 from "../images/9thpicture.webp"
+import Image1 from "../images/TreeGalleryPruning.jpg"
+import Image2 from "../images/TreeGaleryRemoval.jpg"
+import Image3 from "../images/TreeGalleryTrimming.jpg"
+import Image4 from "../images/TreeGalleryEmergency.jpg"
 
 const galleryItems = [
     {
         image: Image4,
-        title: "Filter Cleaning",
-        tag: "Heavy Duty",
+        title: "Emergency Response",
+        tag: "Gallery",
     },
     {
         image: Image1,
-        title: "Commercial Pool Cleaning",
-        tag: "Commercial Pools",
+        title: "Tree Pruning",
+        tag: "Gallery",
     },
     {
         image: Image2,
-        title: "Residential Pool Cleaning",
-        tag: "Residential Pools",
+        title: "Tree Removal",
+        tag: "Gallery",
     },
     {
         image: Image3,
-        title: "Netting, Leafing",
-        tag: "Light Work",
+        title: "Tree Trimming",
+        tag: "Gallery",
     },
 ];
 
