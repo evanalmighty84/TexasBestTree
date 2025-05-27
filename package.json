@@ -1,0 +1,16 @@
+{
+  "name": "texasbesttree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "evanalmighty84.github.io",
+  "workspaces": ["functions"],
+  "scripts": {
+    "predeploy": "npm run build --prefix react-app && rm -rf app && mkdir app && cp -r react-app/build/* app/",
+    "deploy": "catalyst deploy",
+    "serve": "npm run predeploy && catalyst serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,141 @@
+/* overall navbar */
+.navbar {
+    background: linear-gradient(90deg, #1c1c1c, #8e44ad, #1abc9c);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* center content and set height */
+.navbar-container {
+    max-width: 1200px;
+
+    padding: 0 1rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* brand / logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.navbar-brand .logo {
+    height: 40px;
+    width: auto;
+}
+.navbar-brand .brand-text {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/* hamburger button */
+.navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+.navbar-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+/* animate into “X” when open */
+.navbar-toggle.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.navbar-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.navbar-toggle.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* mobile menu (hidden by default) */
+.navbar-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: inherit;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+.navbar-menu.active {
+    max-height: 300px; /* enough to show all items */
+}
+
+/* link lists inside menu */
+.navbar-links,
+.navbar-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar-links li,
+.navbar-social li {
+    text-align: center;
+    margin: 1rem 0;
+}
+.navbar-links li,
+.navbar-links li a,
+.navbar-links li button {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.navbar-links li a:hover,
+.navbar-links li button:hover {
+    text-decoration: underline;
+}
+
+/* social icon */
+.navbar-social li a .fa {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* desktop overrides */
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-menu {
+        position: static;
+        max-height: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .navbar-links li {
+        margin: 0;
+    }
+
+    .navbar-social {
+        margin-left: 2rem;
+    }
+    .navbar-social li {
+        margin: 0;
+    }
+}
