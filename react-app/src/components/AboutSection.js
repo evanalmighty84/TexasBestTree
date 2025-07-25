@@ -7,47 +7,48 @@ const AboutSection = () => {
     return (
         <section id="about" data-stellar-background-ratio="0.5">
             <div className="container">
-                <div className="row">
+                <div className="row text-center align-items-center">
 
-                    <div className="col-md-5 col-sm-6">
-                        <div className="about-info">
-                            <div className="section-title">
-                                <h2>We'll make sure your pool is healthy and clean</h2>
-                                <span className="line-bar">...</span>
-                            </div>
-                            <h1>Rated The best Tree Service in the state of Texas!</h1>
-                            <blockquote style={{color:'black'}}>"Tree, Removal, Tree Maintenance, Tree Equipment Repair, whatever the tree problem we provide
-                                the tree solution."</blockquote>
-
-                                               </div>
+                    {/* Left Image */}
+                    <div className="col-md-4 col-sm-12">
+                        <div className="about-image">
+                            <img
+                                src={Image}
+                                className="img-responsive"
+                                style={{ maxWidth: '100%', height: 'auto' }}
+                                alt="Tree Removal Picture"
+                            />
+                        </div>
                     </div>
 
-                    <div className="col-md-3 col-sm-6">
-                        <div className="about-info skill-thumb" style={{ textAlign: 'center' }}>
+                    {/* Center Text */}
+                    <div className="col-md-4 col-sm-12">
+                        <div className="about-info px-3">
+
+                            <h1>The absolute best when it comes to Tree Care</h1>
+                            <blockquote style={{ color: 'black', fontStyle: 'italic' }}>
+                                "Whatever the Tree problem, we provide the tree solution."
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="col-md-4 col-sm-12">
+                        <div className="about-image">
                             <img
                                 src={Image2}
                                 className="img-responsive"
                                 style={{ maxWidth: '100%', height: 'auto' }}
-                                alt="Pool Cleaning Clipart"
+                                alt="Tree Removal Picture"
                             />
-                        </div>
-                    </div>
-
-                    <div className="col-md-4 col-sm-12">
-                        <div className="about-image">
-                            <img
-                                className="img-responsive"
-                                src={Image}
-                                style={{ maxWidth: '100%', height: 'auto' }}
-                                className="img-responsive"
-                                alt="Painting Animation"
-                            />
-                            <span><h2 style={{color:'black', textAlign:'center',paddingTop:'1rem'}}>"The absolute best when it comes to Tree Care"</h2></span>
                         </div>
                     </div>
 
                 </div>
+
+
             </div>
+
         </section>
     );
 };

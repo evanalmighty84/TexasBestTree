@@ -33,6 +33,9 @@ jobs:
         run: |
           CI=false npm run predeploy
 
+      - name: Add CNAME file
+        run: echo 'www.txbesttreeco.com' > react-app/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

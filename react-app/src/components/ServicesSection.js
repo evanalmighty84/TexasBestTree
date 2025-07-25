@@ -28,13 +28,13 @@ const services = [
     {
         title: 'Emergency Storm Response',
         description:
-            'Available 24/7 to clear fallen trees and dangerous limbs after storms, minimizing damage and restoring safety to your home or business.',
+            'We safely remove fallen trees and dangerous limbs after storms, minimzing damage and restoring safety to your home and business',
         image: TreeStorm,
     },
 ];
 
 const ServicesSection = () => {
-    const gradient = 'linear-gradient(90deg, rgb(0, 0, 0), rgb(225, 225, 225), rgb(0, 0, 0))';
+    const gradient = 'black';
 
     return (
         <section

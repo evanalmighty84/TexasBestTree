@@ -86,6 +86,9 @@ const HeroSection = () => {
 
                         {/* Logo */}
                         <div className="text-center mb-3">
+                            Enter your contact information for a free estimate
+                            <br/>
+                            <br/>
                             <img
                                 src={TreeLogo}
                                 alt="Tree Company Logo"
@@ -221,11 +224,11 @@ const HeroSection = () => {
                     }}
                 >
                     <h1 style={{ color: '#fff', margin: 0 }}>
-                        Texas Best Tree Company™
+                        Texas Best Tree Company
                     </h1>
                     <p style={{ color: '#fff', fontSize: '16px', marginTop: '0.5rem' }}>
                         Provides the highest standards of Tree Care and Tree Removal for both
-                        Residential and Commercial clients. We service the entire Metroplex.
+                        Residential and Commercial customers. We service the entire DFW Metroplex.
                     </p>
                 </div>
             </section>
