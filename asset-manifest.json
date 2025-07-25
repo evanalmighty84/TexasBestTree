@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/TexasBestTree/static/css/main.3473060f.css",
-    "main.js": "/TexasBestTree/static/js/main.6ccd2eac.js",
+    "main.js": "/TexasBestTree/static/js/main.b8a4b095.js",
     "static/media/TreeMovie3.gif": "/TexasBestTree/static/media/TreeMovie3.3c62e85a8d2280357c97.gif",
     "static/media/TreeGalleryEmergency.jpg": "/TexasBestTree/static/media/TreeGalleryEmergency.996ea4f726567eb6d208.jpg",
+    "static/media/newtreepruning.jpg": "/TexasBestTree/static/media/newtreepruning.925189190ef56aabd8b1.jpg",
     "static/media/TreeStump.jpg": "/TexasBestTree/static/media/TreeStump.153be67f8f3370dc7964.jpg",
     "static/media/TreeGaleryRemoval.jpg": "/TexasBestTree/static/media/TreeGaleryRemoval.b1d88478ff348b1a26b6.jpg",
     "static/media/treecut1.jpg": "/TexasBestTree/static/media/treecut1.1c10c0d8cefea80cc5e8.jpg",
@@ -11,7 +12,6 @@
     "static/media/TreeGalleryTrimming.jpg": "/TexasBestTree/static/media/TreeGalleryTrimming.a7b799f1fa19f225eb77.jpg",
     "static/media/treecut2.jpg": "/TexasBestTree/static/media/treecut2.e859dbca74ee697ff56b.jpg",
     "static/media/TreeStorm.jpg": "/TexasBestTree/static/media/TreeStorm.72a7db3e90707b212e61.jpg",
-    "static/media/TreeGalleryPruning.jpg": "/TexasBestTree/static/media/TreeGalleryPruning.39eb3b197147f9678dbb.jpg",
     "static/media/logopoolservice.png": "/TexasBestTree/static/media/logopoolservice.89d610e2c7d3ee0fd46b.png",
     "static/media/TreeAboutUs.jpg": "/TexasBestTree/static/media/TreeAboutUs.d90c5a6a79d55a180639.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/TexasBestTree/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -25,10 +25,10 @@
     "static/media/img.png": "/TexasBestTree/static/media/img.7fbb948976a0776011d1.png",
     "index.html": "/TexasBestTree/index.html",
     "main.3473060f.css.map": "/TexasBestTree/static/css/main.3473060f.css.map",
-    "main.6ccd2eac.js.map": "/TexasBestTree/static/js/main.6ccd2eac.js.map"
+    "main.b8a4b095.js.map": "/TexasBestTree/static/js/main.b8a4b095.js.map"
   },
   "entrypoints": [
     "static/css/main.3473060f.css",
-    "static/js/main.6ccd2eac.js"
+    "static/js/main.b8a4b095.js"
   ]
 }
