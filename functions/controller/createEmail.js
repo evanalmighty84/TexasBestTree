@@ -133,6 +133,7 @@ exports.createEmail = [
             }
 
             res.status(200).json({ success: true });
+            return;
         } catch (err) {
             console.error('❌ Error in createEmail:', err);
             res.status(500).json({ error: 'Server error' });
