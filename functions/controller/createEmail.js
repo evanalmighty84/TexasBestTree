@@ -89,26 +89,26 @@ exports.createEmail = [
             await sendEmail(businessEmail, subject, htmlContent);
 
             // --- Send SMS/MMS to customer ---
-            const customerParams = {
-                body: `Hi ${name}, thanks for contacting Tx Best Tree Company! We’ll reach out shortly.`,
-                messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
-                to: sanitizedPhone
-            };
-            if (imageUrl) {
-                customerParams.mediaUrl = [imageUrl];
-            }
-            await client.messages.create(customerParams);
+            try {
+                const customerParams = {
+                    body: `Hi ${name}, thanks for contacting Tx Best Tree Company! We’ll reach out shortly.`,
+                    messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
+                    to: sanitizedPhone
+                };
+                if (imageUrl) customerParams.mediaUrl = [imageUrl];
+                await client.messages.create(customerParams);
 
-            // --- Send SMS/MMS to business ---
-            const businessParams = {
-                body: `📬 New contact from ${name}\n📞 ${sanitizedPhone}\n📧 ${email}\n🏠 ${address}\n📩 ${message}`,
-                messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
-                to: businessPhone
-            };
-            if (imageUrl) {
-                businessParams.mediaUrl = [imageUrl];
+                const businessParams = {
+                    body: `📬 New contact from ${name}\n📞 ${sanitizedPhone}\n📧 ${email}\n🏠 ${address}\n📩 ${message}`,
+                    messagingServiceSid: process.env.TWILIO_MESSAGING_SID,
+                    to: businessPhone
+                };
+                if (imageUrl) businessParams.mediaUrl = [imageUrl];
+                await client.messages.create(businessParams);
+            } catch (twilioError) {
+                console.warn('⚠️ Twilio SMS failed but continuing:', twilioError.message);
+                // Optionally log to DB or monitoring system
             }
-            await client.messages.create(businessParams);
 
             // Upsert subscriber
             const existing = await pool.query(
