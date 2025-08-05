@@ -26,7 +26,7 @@ const HeroSection = () => {
 
         try {
             const response = await fetch(
-                'https://texas-best-tree-api.herokuapp.com/api/contactus',
+                'https://texas-best-tree-api-45123f7067cd.herokuapp.com/api/contactus',
                 {
                     method: 'POST',
                     body: formData,
