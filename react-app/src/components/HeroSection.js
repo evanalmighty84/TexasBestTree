@@ -21,8 +21,11 @@ const HeroSection = () => {
     // Form submission handler
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const form = e.target;
+
+        const form = document.querySelector('form'); // ✅ Guaranteed to select the form
         const formData = new FormData(form);
+
+        console.log('📝 Submitting form data:', [...formData.entries()]); // optional debugging
 
         try {
             const response = await fetch(
@@ -33,19 +36,21 @@ const HeroSection = () => {
                 }
             );
 
-            if (response.ok) {
+            const data = await response.json();
+
+            if (response.ok && data.success) {
                 alert('Message sent successfully!');
                 form.reset();
-                setShowModal(false);    // ← hides the modal+form
+                setShowModal(false);
             } else {
-                const err = await response.json();
-                alert('Error: ' + (err.error || 'Unknown error occurred'));
+                alert('Server returned an error: ' + (data.error || 'Unknown'));
             }
         } catch (error) {
-            console.error(error);
+            console.error('❌ Frontend fetch error:', error);
             alert('An error occurred. Please try again.');
         }
     };
+
 
 
     return (
